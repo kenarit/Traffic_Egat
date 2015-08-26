@@ -28,7 +28,53 @@ public class MainActivity extends AppCompatActivity {
 
         // Button Controller
         buttonController();
+
+        // Create ListView
+        createListView();
+
     } // Main Method
+
+    private void createListView() {
+
+        //Setup intDrawable
+        int intDrawable[] = {R.drawable.traffic_01, R.drawable.traffic_02,
+                R.drawable.traffic_03, R.drawable.traffic_04,
+                R.drawable.traffic_05, R.drawable.traffic_06,
+                R.drawable.traffic_07, R.drawable.traffic_08,
+                R.drawable.traffic_09, R.drawable.traffic_10,
+                R.drawable.traffic_11, R.drawable.traffic_12,
+                R.drawable.traffic_13, R.drawable.traffic_14,
+                R.drawable.traffic_15, R.drawable.traffic_16,
+                R.drawable.traffic_17, R.drawable.traffic_18,
+                R.drawable.traffic_19, R.drawable.traffic_20};
+        // Setup strTitle
+        String strTitle[] = new String[20];
+        strTitle[0] = "ห้ามเลี้ยวซ้าย";
+        strTitle[1] = "ห้ามเลี้ยวซ้าย";
+        strTitle[2] = "ห้ามเลี้ยวขวา";
+        strTitle[3] = "ตรงไป";
+        strTitle[4] = "เลี้ยวขวา";
+        strTitle[5] = "เลี้ยวซ้าย";
+        strTitle[6] = "ออก";
+        strTitle[7] = "เข้า";
+        strTitle[8] = "ออก";
+        strTitle[9] = "หยุด";
+        strTitle[10] = "จำกัดความสูง";
+        strTitle[11] = "ทางแยง";
+        strTitle[12] = "ห้ามกลับรถ";
+        strTitle[13] = "ห้ามจอด";
+        strTitle[14] = "รถสวน";
+        strTitle[15] = "ห้ามแซง";
+        strTitle[16] = "เข้า";
+        strTitle[17] = "หยุดตรวจ";
+        strTitle[18] = "จำกัดความเร็ว";
+        strTitle[19] = "จำกัดความสูง";
+
+        MyAdapter objMyAdapter = new MyAdapter(MainActivity.this, intDrawable, strTitle);
+        trafficListView.setAdapter(objMyAdapter);
+
+    } //CreateListView
+
 
     private void buttonController() {
 
